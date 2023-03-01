@@ -23,8 +23,13 @@ public class Usuario {
 	private String telefono;
 	private String tipoDeUsuario;
 	private String password;
+	
 	@OneToMany(mappedBy = "usuario")
 	private List<Producto> productos;
+	
+	@OneToMany(mappedBy = "usuario")
+	private List<Orden> ordenes;
+	
 	public Usuario() {
 	}
 	
